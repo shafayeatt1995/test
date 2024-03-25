@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.json({ status: true });
+  res.sendFile(__dirname + "/balsal.html");
 });
 
 app.get("/qr", async (req, res) => {
